@@ -1,0 +1,6 @@
+node_modules
+.next
+.env
+*.MP4
+*.mov
+*.avi
