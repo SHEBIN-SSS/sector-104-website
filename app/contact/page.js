@@ -7,25 +7,25 @@ export default function Contact() {
   
         <form className="space-y-4">
           <input
-            className="w-full p-3 bg-grayDark rounded"
+            className="w-full p-4 text-base"
             placeholder="Name"
           />
           <input
-            className="w-full p-3 bg-grayDark rounded"
+            className="w-full p-4 text-base"
             placeholder="Email"
           />
           <input
-            className="w-full p-3 bg-grayDark rounded"
+            className="w-full p-4 text-base"
             placeholder="City"
           />
           <textarea
-            className="w-full p-3 bg-grayDark rounded"
+            className="w-full p-4 text-base"
             placeholder="Message"
           />
   
           <button
             type="submit"
-            className="bg-primary text-dark px-6 py-3 rounded font-semibold w-full"
+            className="w-full sm:w-auto px-6 py-4"
           >
             Send Message
           </button>

@@ -22,7 +22,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl md:text-6xl font-bold mb-4"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-center"
         >
           Canada’s{" "}
           <span className="text-primary">Next-Gen</span>{" "}
@@ -33,7 +33,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-gray-200 max-w-2xl mx-auto mb-8 text-lg md:text-xl text-center"
+            className="text-gray-200 max-w-xl md:max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-center"
         >
         Where unforgettable nights, massive crowds, and epic journeys
         of sound, lights, and energy come alive.
@@ -43,7 +43,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <motion.a
             href="/events"
@@ -60,7 +60,7 @@ export default function Home() {
             href="/contact"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="border border-primary px-6 py-3 rounded hover:bg-primary hover:text-dark"
+            className="w-full sm:w-auto px-6 py-3"
           >
             Book Your City
           </motion.a>

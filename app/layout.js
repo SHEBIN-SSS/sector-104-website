@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="pt-14 md:pt-16">
         <Navbar />
         {children}
       </body>

@@ -33,7 +33,7 @@ export default function Events() {
         </p>
 
         {/* Posters */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             "/upcoming-events/raagam/poster1.PNG",
             "/upcoming-events/raagam/poster2.PNG",
@@ -44,7 +44,7 @@ export default function Events() {
               src={src}
               alt={`RAAGAM Poster ${index + 1}`}
               whileHover={{ scale: 1.05 }}
-              className="rounded-xl shadow-lg cursor-pointer object-cover"
+              className="w-full h-auto max-h-[420px] object-cover"
             />
           ))}
         </div>
