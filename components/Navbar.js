@@ -1,35 +1,27 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-dark border-b border-grayDark">
-      <div className="flex items-center justify-between px-4 md:px-10 h-14 md:h-16">
+    <nav className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-gray-800">
+      <div className="flex items-center justify-between px-4 h-14">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/">
           <img
-            src="/logo.PNG"
-            alt="Sector 104 Logo"
-            className="h-14 md:h-20 w-auto -my-3"
+            src="/logo.png"
+            alt="Sector 104"
+            className="h-16 -my-2"
           />
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 text-sm md:text-base">
-          <Link href="/">Home</Link>
-          <Link href="/events">Upcoming Events</Link>
-          <Link href="/past-events">Past Events</Link>
-          <Link href="/contact">Contact</Link>
-        </div>
-
-        {/* Mobile Hamburger */}
+        {/* Hamburger */}
         <button
-          className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
+          className="text-2xl"
         >
           ☰
         </button>
@@ -37,13 +29,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-black border-t border-grayDark">
-          <div className="flex flex-col text-center py-4 space-y-4">
-            <Link onClick={() => setOpen(false)} href="/">Home</Link>
-            <Link onClick={() => setOpen(false)} href="/events">Upcoming Events</Link>
-            <Link onClick={() => setOpen(false)} href="/past-events">Past Events</Link>
-            <Link onClick={() => setOpen(false)} href="/contact">Contact</Link>
-          </div>
+        <div className="flex flex-col items-center gap-6 py-8 bg-black text-lg">
+          <Link onClick={() => setOpen(false)} href="/">Home</Link>
+          <Link onClick={() => setOpen(false)} href="/events">Events</Link>
+          <Link onClick={() => setOpen(false)} href="/past-events">Highlights</Link>
+          <Link onClick={() => setOpen(false)} href="/contact">Contact</Link>
         </div>
       )}
     </nav>

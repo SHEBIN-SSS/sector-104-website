@@ -1,35 +1,21 @@
+"use client";
+
 export default function Contact() {
-    return (
-      <section className="px-10 py-12 max-w-xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6 text-primary">
-          Contact Us
-        </h2>
-  
-        <form className="space-y-4">
-          <input
-            className="w-full p-4 text-base"
-            placeholder="Name"
-          />
-          <input
-            className="w-full p-4 text-base"
-            placeholder="Email"
-          />
-          <input
-            className="w-full p-4 text-base"
-            placeholder="City"
-          />
-          <textarea
-            className="w-full p-4 text-base"
-            placeholder="Message"
-          />
-  
-          <button
-            type="submit"
-            className="w-full sm:w-auto px-6 py-4"
-          >
-            Send Message
-          </button>
-        </form>
-      </section>
-    );
-  } 
+  return (
+    <section className="px-4 pt-20 pb-10">
+      <h2 className="text-3xl text-center font-bold text-yellow-400 mb-6">
+        Contact Us
+      </h2>
+
+      <form className="space-y-4">
+        <input className="w-full p-4 rounded bg-gray-800" placeholder="Name" />
+        <input className="w-full p-4 rounded bg-gray-800" placeholder="Email" />
+        <textarea className="w-full p-4 rounded bg-gray-800" placeholder="Message" />
+
+        <button className="w-full bg-yellow-400 text-black py-4 rounded-full font-semibold text-lg">
+          Send Message
+        </button>
+      </form>
+    </section>
+  );
+}

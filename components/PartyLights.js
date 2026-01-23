@@ -1,33 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export default function PartyLights() {
-  const [lights, setLights] = useState([]);
-
-  useEffect(() => {
-    const generatedLights = Array.from({ length: 12 }).map(() => ({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-    }));
-    setLights(generatedLights);
-  }, []);
-
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {lights.map((light, i) => (
+    <div className="absolute inset-0 pointer-events-none">
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-3 h-3 rounded-full bg-primary opacity-70"
-          initial={{ x: light.x, y: light.y }}
+          className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+          initial={{
+            x: Math.random() * 360,
+            y: Math.random() * 700,
+            opacity: 0.3,
+          }}
           animate={{
-            y: [light.y, light.y - 200, light.y],
-            opacity: [0.2, 0.8, 0.2],
+            y: ["0%", "-20%", "0%"],
+            opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
-            duration: 3 + Math.random() * 3,
+            duration: 4 + i,
             repeat: Infinity,
-            ease: "easeInOut",
           }}
         />
       ))}
